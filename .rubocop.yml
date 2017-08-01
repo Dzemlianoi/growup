@@ -1,0 +1,40 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  Exclude:
+    - "bin/*"
+    - "db/**/*"
+    - "vendor/**/*"
+    - "node_modules/**/*"
+
+Bundler/OrderedGems:
+  Enabled: false
+
+HasAndBelongsToMany:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+  Exclude:
+    - test/**/*_test.rb
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

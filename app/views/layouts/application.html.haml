@@ -1,0 +1,13 @@
+!!!
+%html{ lang: 'en-US' }
+  %head
+    = csrf_meta_tags
+    = stylesheet_link_tag 'application.css'
+    %meta{ charset: 'utf-8' }
+    %title GrowupCourses
+  %body
+    %p.notice
+      = notice
+    %p.notice
+      = alert
+    = yield

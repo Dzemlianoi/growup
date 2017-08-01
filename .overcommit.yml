@@ -1,0 +1,32 @@
+CommitMsg:
+  CapitalizedSubject:
+    enabled: false
+  EmptyMessage:
+    enabled: false
+  TrailingPeriod:
+    enabled: true
+  TextWidth:
+    enabled: false
+
+PreCommit:
+  ALL:
+    on_warn: fail
+  AuthorEmail:
+    enabled: true
+  AuthorName:
+    enabled: true
+  CoffeeLint:
+    enabled: true
+  HamlLint:
+    enabled: true
+  RailsBestPractices:
+    enabled: true
+  RuboCop:
+    enabled: true
+  MergeConflicts:
+    enabled: true
+  TrailingWhitespace:
+    enabled: true
+    exclude: 'vendor/**/*'
+  YamlSyntax:
+    enabled: true

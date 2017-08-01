@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: growup-courses_development
+
+test:
+  <<: *default
+  database: growup-courses_test
+
+production:
+  <<: *default
+  database: growup-courses_production
+  username: growup-courses
+  password: <%= ENV['GROWUP-COURSES_DATABASE_PASSWORD'] %>
