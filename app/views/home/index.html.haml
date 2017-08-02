@@ -2,7 +2,7 @@
   .col-md-12.text-center
     .big-text
       Sign in
-    %a.btn.btn-block.btn-social.btn-lg.btn-facebook.sign-in-butt
+    = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
       %span.fa.fa-facebook
       Sign in with Facebook
     %a.btn.btn-block.btn-social.btn-lg.btn-google.sign-in-butt

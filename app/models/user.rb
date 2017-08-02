@@ -8,6 +8,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
       # user.image = auth.info.image # assuming the user model has an image
       # user.name = auth.info.name   # assuming the user model has a name
+    end
   end
 
   def self.new_with_session(params, session)
