@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, span, input, li, div {
+  font-family: 'PT Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+  color: white !important;
+}
+
+.body-background{
+  background: image-url('background.gif');
+  min-height: 1000px;
+  opacity: 0.9;
+}
+
+.sign-in{
+  width: 50%;
+  background-color: white;
+  min-height: 200px;
+  margin: 0 auto;
+}
