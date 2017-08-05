@@ -1,1 +1,6 @@
 en:
+  flashes:
+    errors:
+      already_registred: "You have already been registred with %{provider}"
+    success:
+      wait_for_approve: Your sign in request has been send to me. When i approve your request - you'll receive and email.

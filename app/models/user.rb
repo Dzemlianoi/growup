@@ -3,19 +3,28 @@ class User < ApplicationRecord
    omniauth_providers: %i(facebook github twitter google_oauth2)
 
   def self.from_omniauth(auth)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0,20]
-      # user.image = auth.info.image # assuming the user model has an image
-      # user.name = auth.info.name   # assuming the user model has a name
-    end
+    @auth = auth
+    base_params = { provider: @auth.provider, uid: @auth.uid }
+    return find_by(base_params) if exists?(base_params)
+    return already_used_provider if registred_with_another_provider
+    create(base_params.merge(additional_params))
   end
 
-  def self.new_with_session(params, session)
-    super.tap do |user|
-      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
-        user.email = data["email"] if user.email.blank?
-      end
-    end
+  private
+
+  def self.additional_params
+    { email: @auth.info.email, password: Devise.friendly_token[0,20] }
+  end
+
+  def self.already_used_provider
+    { provider: find_by(email: @auth.info.email).provider }
+  end
+
+  def self.registred_with_another_provider
+    where(email: @auth.info.email).where.not(provider: @auth.provider).present?
+  end
+
+  def email_required?
+    false
   end
 end

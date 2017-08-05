@@ -6,8 +6,9 @@
     %meta{ charset: 'utf-8' }
     %title GrowupCourses
   %body.main
-    %p.notice
-      = notice
-    %p.notice
-      = alert
+    - flash.each do |key, value|
+      - key = 'danger' if key == 'alert'
+      - key = 'success' if key == 'notice'
+      %div{class: "text-center alert alert-#{key}"}
+        = value
     = yield
