@@ -2,6 +2,14 @@ body.main {
   position: relative;
 }
 
+.page-wrapper {
+  padding-top: 50px;
+}
+
+.flash-wrapper {
+  min-height: 50px;
+}
+
 body::before {
   background: image-url('background.jpg') no-repeat center center fixed;
   content: '';
@@ -27,11 +35,11 @@ h1, h2, span, input, li, div {
 }
 
 .big-text{
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 60px;
   font-weight: bold;
   margin: 0;
-  padding-top: 125px;
+  padding-top: 75px;
 }
 
 .sign-in-butt{
@@ -42,4 +50,21 @@ h1, h2, span, input, li, div {
 
 .sign-in-butt:hover{
   cursor: pointer;
+}
+
+.alert{
+  border: none;
+  margin: 0 auto;
+  width: 80%;
+  font-size:17px;
+  font-weight: bold;
+  opacity:0.75;
+}
+
+.alert-success{
+  background-color: #1fa527 !important;
+}
+
+.alert-danger{
+  background-color: #f96b6d;
 }
