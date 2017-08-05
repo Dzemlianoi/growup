@@ -5,12 +5,12 @@
     = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
       %span.fa.fa-facebook
       Sign in with Facebook
-    %a.btn.btn-block.btn-social.btn-lg.btn-google.sign-in-butt
+    = link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-google sign-in-butt' do
       %span.fa.fa-google
       Sign in with Google
-    %a.btn.btn-block.btn-social.btn-lg.btn-github.sign-in-butt
+    = link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-github sign-in-butt' do
       %span.fa.fa-github
       Sign in with Github
-    %a.btn.btn-block.btn-social.btn-lg.btn-twitter.sign-in-butt
+    = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-twitter sign-in-butt' do
       %span.fa.fa-twitter
       Sign in with Twitter
