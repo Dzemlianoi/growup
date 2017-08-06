@@ -1,16 +1,22 @@
 .container
   .col-md-12.text-center
-    .big-text
-      Sign in
-    = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
-      %span.fa.fa-facebook
-      Sign in with Facebook
-    = link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-google sign-in-butt' do
-      %span.fa.fa-google
-      Sign in with Google
-    = link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-github sign-in-butt' do
-      %span.fa.fa-github
-      Sign in with Github
-    = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-twitter sign-in-butt' do
-      %span.fa.fa-twitter
-      Sign in with Twitter
+    - if params[:success]
+      .success-message
+      = link_to root_path, class:'btn btn-success back-btn' do
+        %i.fa.fa-arrow-left
+        Back
+    - else
+      .big-text
+        Sign in
+      = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
+        %span.fa.fa-facebook
+        With Facebook
+      = link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-google sign-in-butt' do
+        %span.fa.fa-google
+        With Google
+      = link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-github sign-in-butt' do
+        %span.fa.fa-github
+        With Github
+      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-twitter sign-in-butt' do
+        %span.fa.fa-twitter
+        With Twitter

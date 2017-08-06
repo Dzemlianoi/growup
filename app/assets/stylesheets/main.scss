@@ -68,3 +68,52 @@ h1, h2, span, input, li, div {
 .alert-danger{
   background-color: #f96b6d;
 }
+
+.success-message{
+  margin-top: 100px !important;
+  background-image: image-url('success.png');
+  margin: 0 auto;
+  width: 128px;
+  height: 120px;
+}
+
+.back-btn{
+  margin-top: 30px;
+  font-size: 22px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.courses-header{
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  letter-spacing: 15px;
+  margin-bottom: 30px;
+}
+
+.course-item{
+  padding-left: 20px;
+  margin: 20px auto;
+}
+
+.course-title{
+  font-size: 35px !important;
+}
+
+.course-description{
+  font-size: 22px;
+}
+
+.course-title:hover {
+  text-decoration: none;
+}
+
+.course-title:hover span {
+  text-decoration: underline;
+}
+
+.course-icon{
+  color: salmon;
+  margin-right: 15px;
+}

@@ -1,0 +1,12 @@
+.courses-header
+  Course list
+
+- @courses.active.each do |course|
+  .col-md-offset-1.col-md-11
+    .course-item
+      = link_to course, class: 'course-title' do
+        %i.fa.fa-bookmark-o.course-icon
+        %span
+          = course.title
+      .course-description
+        = course.description
