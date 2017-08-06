@@ -7,11 +7,11 @@
     %title GrowupCourses
   %body.main
     .page-wrapper
-      .flash-wrapper
-        - flash.each do |key, value|
-          - key = 'danger' if key == 'alert'
-          - key = 'success' if key == 'notice'
-          %div{class: "text-center alert alert-#{key}"}
-            = value
-            
+      - unless controller.controller_name == "courses"
+        .flash-wrapper
+          - flash.each do |key, value|
+            - key = 'danger' if key == 'alert'
+            - key = 'success' if key == 'notice'
+            %div{class: "text-center alert alert-#{key}"}
+              = value
       = yield

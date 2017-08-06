@@ -2,6 +2,10 @@ body.main {
   position: relative;
 }
 
+header {
+  padding-left: 35px;
+}
+
 .page-wrapper {
   padding-top: 50px;
 }
@@ -116,4 +120,13 @@ h1, h2, span, input, li, div {
 .course-icon{
   color: salmon;
   margin-right: 15px;
+}
+
+.logo-img{
+  width: 200px
+}
+
+.slide-text{
+  padding-top:40px;
+  text-align: center;
 }
