@@ -1,39 +1,13 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  def facebook
-    @user = User.from_omniauth(request.env["omniauth.auth"])
-    if @user.instance_of?(User)
-      sign_in @user
-      redirect_to courses_path
-    else
-      redirect_to root_path, alert: I18n.t('flashes.errors.already_registred', provider: @user[:provider].humanize)
-    end
-  end
 
-  def twitter
-    @user = User.from_omniauth(request.env["omniauth.auth"])
-    if @user.instance_of?(User)
-      sign_in @user
-      redirect_to courses_path
-    else
-      redirect_to root_path, alert: I18n.t('flashes.errors.already_registred', provider: @user[:provider].humanize)
-    end
-  end
+  ALIAS_METHODS = %w(github facebook google_oauth2 twitter)
 
-  def google_oauth2
-    @user = User.from_omniauth(request.env["omniauth.auth"])
-    if @user.instance_of?(User)
-      sign_in @user
-      redirect_to courses_path
-    else
-      redirect_to root_path, alert: I18n.t('flashes.errors.already_registred', provider: @user[:provider].humanize)
-    end
-  end
-
-  def github
+  def action_missing(action)
+    raise ActionController::RoutingError unless ALIAS_METHODS.include?(action)
     @user = User.from_omniauth(request.env["omniauth.auth"])
     if @user.instance_of?(User)
       return sign_in_and_redirect(@user, scope: :user) if @user.confirmed?
-      redirect_to root_path, notice: I18n.t('flashes.success.wait_for_approve')
+      redirect_to root_path(success: 1), notice: I18n.t('flashes.success.wait_for_approve')
     else
       redirect_to root_path, alert: I18n.t('flashes.errors.already_registred', provider: @user[:provider].humanize)
     end
