@@ -9,6 +9,7 @@ gem 'activeadmin'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'bitly'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'cancancan'
 gem 'carrierwave'
 gem 'cloudinary', group: :staging
 gem 'coffee-rails'
