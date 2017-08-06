@@ -8,15 +8,16 @@
     - else
       .big-text
         Sign in
-      = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
-        %span.fa.fa-facebook
-        With Facebook
-      = link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-google sign-in-butt' do
-        %span.fa.fa-google
-        With Google
-      = link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-github sign-in-butt' do
-        %span.fa.fa-github
-        With Github
-      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-twitter sign-in-butt' do
-        %span.fa.fa-twitter
-        With Twitter
+      .social-links
+        = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-facebook sign-in-butt' do
+          %span.fa.fa-facebook
+          With Facebook
+        = link_to user_google_oauth2_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-google sign-in-butt' do
+          %span.fa.fa-google
+          With Google
+        = link_to user_github_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-github sign-in-butt' do
+          %span.fa.fa-github
+          With Github
+        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-block btn-social btn-lg btn-twitter sign-in-butt' do
+          %span.fa.fa-twitter
+          With Twitter

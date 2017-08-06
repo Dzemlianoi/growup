@@ -37,6 +37,7 @@ gem 'rails', '~> 5.1.2'
 gem 'rails_best_practices'
 gem 'sass'
 gem 'sass-rails', '~> 5.0'
+gem 'tether-rails'
 gem 'therubyracer'
 gem 'uglifier', '>= 1.3.0'
 

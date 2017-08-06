@@ -3,9 +3,10 @@
   %head
     = csrf_meta_tags
     = stylesheet_link_tag 'application.css'
+    = javascript_include_tag 'application', 'data-turbolinks-track': true, cache: true, recursive: true, async: Rails.env.production?
     %meta{ charset: 'utf-8' }
     %title GrowupCourses
-  %body.main
+  %body.main{ class: "#{'reveal' if controller =='courses' && action == 'show' }" }
     .page-wrapper
       - unless controller.controller_name == "courses"
         .flash-wrapper
