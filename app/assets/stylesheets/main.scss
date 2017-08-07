@@ -1,5 +1,12 @@
+html{
+  overflow: scroll;
+}
+
 body.main {
   position: relative;
+  height: auto;
+  overflow: none;
+  opacity: 0.9;
 }
 
 header {
@@ -102,15 +109,16 @@ h1, h2, span, input, li, div {
 
 .course-item{
   padding-left: 20px;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 
 .course-title{
   font-size: 35px !important;
+  letter-spacing: 3px;
 }
 
-.course-description{
-  font-size: 22px;
+.course-title span {
+  color: skyblue !important;
 }
 
 .course-title:hover {
@@ -119,6 +127,11 @@ h1, h2, span, input, li, div {
 
 .course-title:hover span {
   text-decoration: underline;
+}
+
+.course-description{
+  font-size: 22px;
+  margin: 10px 0 0 30px;
 }
 
 .course-icon{
