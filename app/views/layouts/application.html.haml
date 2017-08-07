@@ -3,16 +3,21 @@
   %head
     = csrf_meta_tags
     = stylesheet_link_tag 'application.css'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700'
     = javascript_include_tag 'application', 'data-turbolinks-track': true, cache: true, recursive: true, async: Rails.env.production?
     %meta{ charset: 'utf-8' }
     %title GrowupCourses
   %body.main{ class: "#{'reveal' if controller =='courses' && action == 'show' }" }
-    .page-wrapper
-      - unless controller.controller_name == "courses"
-        .flash-wrapper
-          - flash.each do |key, value|
-            - key = 'danger' if key == 'alert'
-            - key = 'success' if key == 'notice'
-            %div{class: "text-center alert alert-#{key}"}
-              = value
-      = yield
+    .row
+      .col-md-2
+        %span Here is a logo
+      .col.md-8.col-md-offset-2
+        .page-wrapper
+          - unless controller.controller_name == "courses"
+            .flash-wrapper
+              - flash.each do |key, value|
+                - key = 'danger' if key == 'alert'
+                - key = 'success' if key == 'notice'
+                %div{class: "text-center alert alert-#{key}"}
+                  = value
+          = yield

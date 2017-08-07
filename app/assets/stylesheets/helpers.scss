@@ -1,0 +1,12 @@
+.divider {
+  height: 1px;
+  background-color: white
+}
+.divider--sm {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.divider--dark {
+  background-color: color(grey-900);
+}
