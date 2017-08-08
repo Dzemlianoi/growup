@@ -13,6 +13,16 @@ header {
   padding-left: 35px;
 }
 
+.logo-block {
+  padding: 30px;
+}
+
+.logo-img {
+  position: fixed;
+  max-width: 80%;
+  width:150px;
+}
+
 .page-wrapper {
   padding-top: 50px;
 }
@@ -114,6 +124,7 @@ h1, h2, span, input, li, div {
 }
 
 .course-description{
+  line-height:52px;
   font-size: 25px;
   color: salmon !important;
   margin: 10px 0 0 30px;
@@ -122,10 +133,6 @@ h1, h2, span, input, li, div {
 .course-icon{
   color: salmon;
   margin-right: 15px;
-}
-
-.logo-img{
-  width: 200px
 }
 
 .slide-text{

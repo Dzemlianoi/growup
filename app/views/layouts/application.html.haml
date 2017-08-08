@@ -9,9 +9,10 @@
     %title GrowupCourses
   %body.main{ class: "#{'reveal' if controller =='courses' && action == 'show' }" }
     .row
-      .col-md-2
-        %span Here is a logo
-      .col.md-8.col-md-offset-2
+      .col-md-2.logo-block
+        = link_to courses_path do
+          = image_tag 'logo1.png', class: 'logo-img'
+      .col-md-8.col-md-offset-2
         .page-wrapper
           - unless controller.controller_name == "courses"
             .flash-wrapper
