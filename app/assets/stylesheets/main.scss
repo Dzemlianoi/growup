@@ -2,6 +2,16 @@ html{
   overflow: scroll;
 }
 
+body {
+  background: image-url('background1.jpg');
+  min-height:585px;
+}
+
+h1, h2, span, input, li, div {
+  font-family: 'Poppins', sans-serif;
+  color: white !important;
+}
+
 body.main {
   min-height: 700px;
   height: auto;
@@ -29,16 +39,6 @@ header {
 
 .flash-wrapper {
   min-height: 50px;
-}
-
-body {
-  background: image-url('background1.jpg');
-  min-height:585px;
-}
-
-h1, h2, span, input, li, div {
-  font-family: 'Poppins', sans-serif;
-  color: white !important;
 }
 
 .social-links{
@@ -134,9 +134,4 @@ h1, h2, span, input, li, div {
 .course-icon{
   color: salmon;
   margin-right: 15px;
-}
-
-.slide-text{
-  padding-top:40px;
-  text-align: center;
 }
