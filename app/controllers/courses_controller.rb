@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource find_by: :slug
 
   def index
     @courses = @courses.active.by_order

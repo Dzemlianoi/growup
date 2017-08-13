@@ -3,7 +3,7 @@ ActiveAdmin.register Course do
   config.sort_order = 'order_asc'
   actions :all
 
-  permit_params :title, :description, :text, :is_active, :order
+  permit_params :title, :description, :text, :is_active, :order, :slug
 
   index do
     selectable_column
@@ -12,5 +12,6 @@ ActiveAdmin.register Course do
     column :description
     column :is_active
     column :order
+    column :slug
   end
 end
