@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/alexpeattie/heroku_secrets.git
+  revision: 717af8e0acf399bc88d2c8c1a7e230023942af0f
+  specs:
+    heroku_secrets (0.0.2)
+
+GIT
   remote: https://github.com/drapergem/draper
   revision: cfe4d33733ce880cfb33295316147b0e66f62bee
   specs:
@@ -483,6 +489,7 @@ DEPENDENCIES
   fuubar
   haml-lint
   haml-rails
+  heroku_secrets!
   jbuilder (~> 2.5)
   jquery-rails
   letter_opener
