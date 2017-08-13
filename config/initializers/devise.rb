@@ -15,6 +15,6 @@ Devise.setup do |config|
   config.sign_out_via = :delete
   config.omniauth :facebook, ENV['FB_ID'], ENV['FB_SECRET']
   config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
-  config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
-  config.omniauth :github, ENV["GITHUB_ID"], ENV["GITHUB_SECRET"]
+  config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET']
+  config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']
 end

@@ -156,6 +156,8 @@ GEM
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
+    friendly_id (5.2.1)
+      activerecord (>= 4.0.0)
     fuubar (2.2.0)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
@@ -477,6 +479,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   font-awesome-sass
+  friendly_id
   fuubar
   haml-lint
   haml-rails

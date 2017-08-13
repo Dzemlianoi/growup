@@ -4,6 +4,6 @@ class CoursesController < ApplicationController
   def index
     @courses = @courses.active.by_order
   end
-  
+
   def show; end
 end

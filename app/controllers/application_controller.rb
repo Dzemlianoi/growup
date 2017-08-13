@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     raise CanCan::AccessDenied unless current_user.admin?
   end
 
-  def after_sign_in_path_for(resource_or_scope)
+  def after_sign_in_path_for(_resource_or_scope)
     courses_path
   end
 end
