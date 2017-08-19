@@ -1,5 +1,6 @@
 $ ->
   if $('.reveal').length > 0
+    console.log 1
     Reveal.initialize(
 	    controls: true,
       slideNumber: 'c/t',
