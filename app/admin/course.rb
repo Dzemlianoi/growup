@@ -13,5 +13,6 @@ ActiveAdmin.register Course do
     column :is_active
     column :order
     column :slug
+    actions
   end
 end

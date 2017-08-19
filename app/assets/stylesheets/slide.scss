@@ -1,5 +1,5 @@
 .reveal.slide-wrapper{
-  height: 800px;
+  height: 600px;
 }
 
 .reveal .slide-header{
@@ -7,11 +7,58 @@
   font-size: 55px;
   margin-bottom: 70px;
 }
+
+.reveal .slide-header.slider-header-low-margin{
+  margin-bottom: 25px;
+}
+
+.reveal .img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal .img-by-width{
+  width: 150px;
+}
+
+.reveal .img-by-width--middle{
+  width: 300px;
+}
+
+.reveal .img-by-height{
+  height: 150px;
+}
+
+.reveal .salmon{
+  color: salmon !important;
+}
+
 .reveal li{
   font-size: 25px;
   margin-bottom: 30px;
 }
 
-.reveal .salmon{
-  color: salmon !important;
+.reveal .title-definition{
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.reveal .description-definition{
+  font-size: 25px;
+}
+
+.reveal .consistant-item{
+  margin: 0 auto;
+}
+
+.reveal .img-block{
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.reveal .img-inline-block div, .reveal .img-inline-block img {
+  display: inline-block;
+  visibility: middle;
 }
