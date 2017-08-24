@@ -18,6 +18,39 @@
   box-shadow: none;
 }
 
+.reveal code {
+  background: white;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 40px 20px !important;
+  width: 100% !important;
+}
+
+.reveal pre {
+  width: 100% !important;
+}
+
+.reveal .comment {
+  color: grey;
+  font-style: italic;
+}
+
+.reveal .highlighter {
+  position: relative;
+  left: 42%;
+  top: 78px;
+  width: 15%;
+  min-width: 30px;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.reveal .highlighter-git {
+  color: white !important;
+  background: black !important;
+}
+
 .reveal .img-by-width{
   width: 150px;
 }

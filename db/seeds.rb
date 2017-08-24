@@ -6,7 +6,7 @@ def courses
       slug: 'intro',
     },
     {
-      title: 'GIT & other SCV',
+      title: 'GIT & other VCS',
       description: 'Main tool to make your code safe. Add to it some versioning. Flavor it with coworking ability. The basis of basises',
       slug: 'git'
     },
