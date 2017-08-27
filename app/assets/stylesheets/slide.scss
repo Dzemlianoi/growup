@@ -27,6 +27,12 @@
   width: 100% !important;
 }
 
+.reveal code {
+  display: inline;
+  padding: 5px 10px !important;
+  font-size: 25px;
+}
+
 .reveal pre {
   width: 100% !important;
 }
@@ -49,6 +55,11 @@
 .reveal .highlighter-git {
   color: white !important;
   background: black !important;
+}
+
+.reveal .highlighter-bash {
+  background: #A61948 !important;
+  color: white !important;
 }
 
 .reveal .img-by-width{
