@@ -1,13 +1,21 @@
 .courses-header
   Course list
 %hr.divider.divider--sm
-- @courses.active.each do |course|
+- @courses.each do |course|
   .col-md-offset-1.col-md-11
     .course-item
-      = link_to course, class: 'course-title' do
-        %i.fa.fa-bookmark-o.course-icon
-        %span
-          = course.title
-      .course-description
-        = course.description
-%hr.divider.divider--sm.mb-20        
+      - if course.is_active?
+        = link_to course, class: 'course-title' do
+          %i.fa.fa-bookmark-o.course-icon
+          %span
+            = course.title
+        .course-description
+          = course.description
+      - else
+        .inactive-course.course-title
+          %i.fa.fa-eye-slash.course-icon
+            %span
+              = course.title
+        .course-description
+          = course.description
+%hr.divider.divider--sm.mb-20

@@ -117,6 +117,18 @@ header {
   letter-spacing: 3px;
 }
 
+.inactive-course {
+  cursor: default;;
+}
+
+.inactive-course.course-title span{
+  color: grey !important;
+}
+
+.inactive-course.course-title:hover span {
+  color: grey !important;
+  text-decoration: none;
+}
 
 .course-title:hover {
   text-decoration: none;
@@ -135,7 +147,17 @@ header {
   margin: 10px 0 0 55px;
 }
 
+.course-item .inactive-course~.course-description {
+  color: grey !important;
+  font-style: italic;
+}
+
 .course-icon{
   color: salmon;
   margin-right: 15px;
+}
+
+.inactive-course .course-icon {
+  text-decoration: none;
+  color: grey !important;
 }
