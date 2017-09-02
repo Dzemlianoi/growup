@@ -7,6 +7,7 @@ end
 
 gem 'activeadmin'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
+gem 'active_skin'
 gem 'bitly'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'cancancan'
