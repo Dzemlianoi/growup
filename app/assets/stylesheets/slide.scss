@@ -35,6 +35,7 @@
 
 .reveal pre {
   width: 100% !important;
+  min-width: 350px;
 }
 
 .reveal .comment {
@@ -59,6 +60,11 @@
 
 .reveal .highlighter-bash {
   background: #A61948 !important;
+  color: white !important;
+}
+
+.reveal .highlighter-html {
+  background: #eb331b !important;
   color: white !important;
 }
 
