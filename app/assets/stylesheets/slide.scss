@@ -25,9 +25,6 @@
   border-radius: 10px;
   padding: 40px 20px !important;
   width: 100% !important;
-}
-
-.reveal code {
   display: inline;
   padding: 5px 10px !important;
   font-size: 25px;
@@ -51,23 +48,24 @@
   min-width: 30px;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
+  color: white !important;
 }
 
 .reveal .highlighter-git {
-  color: white !important;
   background: black !important;
 }
 
 .reveal .highlighter-bash {
   background: #A61948 !important;
-  color: white !important;
 }
 
 .reveal .highlighter-html {
   background: #eb331b !important;
-  color: white !important;
 }
 
+.reveal .highlighter-css {
+  background: #0261a9 !important;
+}
 .reveal .img-by-width{
   width: 150px;
 }
