@@ -2,7 +2,7 @@
   .col-md-12.text-center
     - if params[:success]
       .success-message
-      = link_to root_path, class:'btn btn-success back-btn' do
+      = link_to new_user_session_path, class:'btn btn-success back-btn' do
         %i.fa.fa-arrow-left
         Back
     - else

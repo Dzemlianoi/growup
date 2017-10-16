@@ -8,17 +8,34 @@
     %meta{ charset: 'utf-8' }
     %title GrowupCourses
   %body.main{ class: "#{'reveal' if controller =='courses' && action == 'show' }" }
-    .row
-      .col-md-2.logo-block
-        = link_to main_logo_link do
-          = image_tag 'logo1.png', class: 'logo-img'
-      .col-md-8.col-md-offset-2
-        .page-wrapper
-          - unless controller.controller_name == "courses"
-            .flash-wrapper
-              - flash.each do |key, value|
-                - key = 'danger' if key == 'alert'
-                - key = 'success' if key == 'notice'
-                %div{class: "text-center alert alert-#{key}"}
-                  = value
-          = yield
+    .container-fluid
+      %nav.row
+        .col-md-2.col-sm-6.col-5.logo-block
+          = link_to root_path do
+            = image_tag 'logo1.png', class: 'logo-img'
+        - if current_user
+          .col-md-10.col-sm-6.col-7
+            .dropdown.nav-dropdown
+              #navMenu.dropdown-toggle{'data-toggle': 'dropdown'}
+                = image_tag(right_url_for_user(current_user.avatar), class: 'img-circle ')
+                %span
+                  = current_user&.name || 'Unknown Stranger'
+              %ul.dropdown-menu.dropdown-menu-right{'aria-labelledby': "navMenu"}
+                %li.dropdown-item
+                  = link_to 'Menu', menu_path
+                %li.dropdown-item
+                  = link_to 'Courses', courses_path
+                %li.dropdown-divider
+                %li.dropdown-item
+                  = link_to 'Logout', destroy_user_session_path
+      .row
+        .col-md-12
+          .page-wrapper
+            - unless controller.controller_name == "courses"
+              .flash-wrapper
+                - flash.each do |key, value|
+                  - key = 'danger' if key == 'alert'
+                  - key = 'success' if key == 'notice'
+                  %div{class: "text-center alert alert-#{key}"}
+                    = value
+            = yield

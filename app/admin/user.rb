@@ -1,21 +1,19 @@
 ActiveAdmin.register User do
   menu priority: 2
 
+  permit_params :email, :admin, :confirmed_at, :group_id
+  %i[email admin confirmed_at provider].each { |filter_name| filter filter_name }
+  filter :group_id, as: :select2, collection: Group.all
+
   index do
-    column :email
-    column :admin
-    column :provider
-    column :uid
-    column :last_sign_in_at
-    column :confirmed_at
+    %i[email admin provider current_sign_in_at].each { |column_name| column column_name }
+    column(:confirmed_at) { |user| user.confirmed_at.present? }
+    column(:group) { |user| user.group&.name}
+    column(:avatar) do |user|
+      file = user.avatar
+      file.blank? ? content_tag(:span, 'No avatar') : link_to(file.url) { image_tag(file.url, class: 'max-width-150') }
+    end
   end
-
-  permit_params :email, :admin, :confirmed_at
-
-  remove_filter :encrypted_password, :reset_password_token, :remember_created_at, :uid,
-                :confirmation_token, :created_at, :updated_at, :confirmation_token,
-                :unconfirmed_email, :confirmation_sent_at, :confirmed_at, :current_sign_in_at,
-                :reset_password_sent_at
 
   batch_action :confirm do |ids|
     batch_action_collection.find(ids).each(&:confirm)

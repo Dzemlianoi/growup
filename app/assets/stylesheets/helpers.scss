@@ -2,6 +2,16 @@
   color: blue;
 }
 
+.img-circle {
+  border-radius: 50%;
+}
+
+.inactive {
+  cursor: default;
+  color: grey !important;
+  font-style: italic;
+}
+
 .divider {
   height: 1px;
   background-color: white
@@ -31,6 +41,10 @@
 
 .mb-40 {
   margin-bottom: 40px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
 }
 
 .mt-40 {

@@ -6,13 +6,14 @@ git_source(:github) do |repo_name|
 end
 
 gem 'activeadmin'
+gem 'activeadmin-select2', git:'https://github.com/mfairburn/activeadmin-select2'
 gem 'activemodel-serializers-xml', git: 'https://github.com/rails/activemodel-serializers-xml'
 gem 'active_skin'
 gem 'bitly'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'cancancan'
 gem 'carrierwave'
-gem 'cloudinary', group: :staging
+gem 'cloudinary'
 gem 'coffee-rails'
 gem 'devise'
 gem 'draper', git: 'https://github.com/drapergem/draper'
@@ -40,6 +41,7 @@ gem 'rails', '~> 5.1.2'
 gem 'rails_best_practices'
 gem 'sass'
 gem 'sass-rails', '~> 5.0'
+gem 'select2-rails'
 gem 'tether-rails'
 gem 'therubyracer'
 gem 'uglifier', '>= 1.3.0'

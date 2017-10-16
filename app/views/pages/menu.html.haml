@@ -1,0 +1,14 @@
+.container
+  .row.mb-70
+    .courses-header.col-md-12.text-center
+      Menu
+    .divider.divider--sm
+  .row
+    %ul.menu
+      %li.courses
+        = link_to 'Courses', courses_path
+      %li.tests.inactive
+        Tests
+      %li.library.inactive
+        Library
+  .divider.divider--sm

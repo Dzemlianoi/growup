@@ -4,6 +4,8 @@
 /.idea/*
 .idea
 .idea/*
+app/views/courses/show.html.erb
+public/*
 
 /node_modules
 /yarn-error.log
