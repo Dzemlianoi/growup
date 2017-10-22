@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def main_logo_link
-    @current_user ? courses_path : root_path
+  def right_url_for_user(avatar)
+    avatar&.bigger&.url || asset_path('defaults/user.png')
   end
 end

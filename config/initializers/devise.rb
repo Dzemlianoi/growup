@@ -9,11 +9,12 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
   config.reconfirmable = true
   config.expire_all_remember_me_on_sign_out = true
-  config.password_length = 6..1280
+  config.password_length = 6..128
   config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
   config.reset_password_within = 6.hours
-  config.sign_out_via = :delete
-  config.omniauth :facebook, ENV['FB_ID'], ENV['FB_SECRET']
+  config.sign_out_via = :get
+
+  config.omniauth :facebook, ENV['FB_ID'], ENV['FB_SECRET'], secure_image_url: true
   config.omniauth :twitter, ENV['TWITTER_KEY'], ENV['TWITTER_SECRET']
   config.omniauth :google_oauth2, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET']
   config.omniauth :github, ENV['GITHUB_ID'], ENV['GITHUB_SECRET']

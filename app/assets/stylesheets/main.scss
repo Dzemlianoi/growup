@@ -23,22 +23,43 @@ header {
   padding-left: 35px;
 }
 
+nav {
+  background-color: black;
+  min-height: 60px;
+  padding-top: 14px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-dropdown {
+  float: right;
+}
+
+.nav-dropdown:hover {
+  cursor: pointer;
+}
+
+.nav-dropdown li {
+  line-height: 1.4;
+}
+
+.nav-dropdown li a{
+  color: black !important;
+}
+
 .d--i-b{
   display: inline-block !important;
 }
 
-.logo-block {
-  padding: 30px;
-}
-
 .logo-img {
-  position: fixed;
-  max-width: 80%;
-  width:150px;
+  width: 110px;
+  vertical-align: middle;
 }
 
 .page-wrapper {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .flash-wrapper {
@@ -54,7 +75,6 @@ header {
   font-size: 60px;
   font-weight: bold;
   margin: 0;
-  padding-top: 75px;
 }
 
 .sign-in-butt{
@@ -98,6 +118,37 @@ header {
   width: 200px;
   border-radius: 10px;
 }
+
+// Menu
+
+.menu li {
+  font-size: 45px;
+  min-height: 80px;
+  padding-left: 25px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+li.tests {
+  list-style-image: url('http://www.theskin.in/images/book-appointment.png');
+}
+
+li.courses{
+  list-style-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Closed_Book_Icon.svg/35px-Closed_Book_Icon.svg.png');
+}
+
+li.library {
+  list-style-image: url('https://lib.ku.edu/sites/lib.drupal.ku.edu/files/images/general/socialmedia/youtube-35px.png');
+}
+
+// Courses
 
 .courses-header{
   text-align: center;
