@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   belongs_to :group
+  has_many :questions
+  has_many :tests, through: :user_test
 
   scope :without_group, -> { where(group: nil) }
 

@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016180446) do
+ActiveRecord::Schema.define(version: 20171022180811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "question_id"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "title", null: false
@@ -32,6 +42,38 @@ ActiveRecord::Schema.define(version: 20171016180446) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["course_id"], name: "index_groups_on_course_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "text"
+    t.integer "variant"
+    t.integer "order"
+    t.bigint "test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_questions_on_test_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "completing_time_minutes"
+    t.bigint "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_tests_on_course_id"
+  end
+
+  create_table "user_tests", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "test_id"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.boolean "finished"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["test_id"], name: "index_user_tests_on_test_id"
+    t.index ["user_id"], name: "index_user_tests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
