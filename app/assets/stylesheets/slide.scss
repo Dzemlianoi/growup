@@ -48,7 +48,12 @@
   min-width: 30px;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
-  color: white !important;
+  color: white;
+}
+
+.reveal code .highlighter {
+  top: -37px;
+  font-size: 20px;
 }
 
 .reveal .highlighter-git {
@@ -66,6 +71,12 @@
 .reveal .highlighter-css {
   background: #0261a9 !important;
 }
+
+.reveal .highlighter-js {
+  background: #dcd03d !important;
+  color: black !important;
+}
+
 .reveal .img-by-width{
   width: 150px;
 }

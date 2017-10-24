@@ -6,6 +6,7 @@ ActiveAdmin.register User do
   filter :group_id, as: :select2, collection: Group.all
 
   index do
+    selectable_column
     %i[email admin provider current_sign_in_at].each { |column_name| column column_name }
     column(:confirmed_at) { |user| user.confirmed_at.present? }
     column(:group) { |user| user.group&.name}

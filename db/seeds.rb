@@ -97,8 +97,44 @@ def courses
   end
 end
 
+def tests
+  [
+    {
+      title: 'GIT',
+      description: '',
+      completing_time_minutes: 30,
+      course_id: Course.find_by(slug: 'git').id
+    },
+    {
+      title: 'HTML',
+      description: '',
+      completing_time_minutes: 30,
+      course_id: Course.find_by(slug: 'html').id
+    },
+    {
+      title: 'CSS',
+      description: '',
+      completing_time_minutes: 30,
+      course_id: Course.find_by(slug: 'css').id
+    },
+    {
+      title: 'Bootstrap',
+      description: '',
+      completing_time_minutes: 30,
+      course_id: Course.find_by(slug: 'bootstrap').id
+    }
+  ].each do |test|
+    next if Test.exists?(title: test[:title])
+    begin
+      Test.create!(test)
+    rescue
+      "Something went wrong with #{test[:title]}"
+    end
+  end
+end
+
 def init
-  courses
+  tests
 end
 
 init
