@@ -30,12 +30,12 @@
                   = link_to 'Logout', destroy_user_session_path
       .row
         .col-md-12
-          .page-wrapper
+          .page-wrapper{ class: ('no-padding' if course_page?) }
             - unless controller.controller_name == "courses"
               .flash-wrapper
                 - flash.each do |key, value|
                   - key = 'danger' if key == 'alert'
                   - key = 'success' if key == 'notice'
-                  %div{class: "text-center alert alert-#{key}"}
+                  %div{class: "text-center alert alert-#{key}" }
                     = value
             = yield

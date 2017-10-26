@@ -14,6 +14,7 @@ ActiveAdmin.register User do
       file = user.avatar
       file.blank? ? content_tag(:span, 'No avatar') : link_to(file.url) { image_tag(file.url, class: 'max-width-150') }
     end
+    actions
   end
 
   batch_action :confirm do |ids|

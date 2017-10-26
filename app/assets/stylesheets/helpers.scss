@@ -31,6 +31,14 @@
   top: 48px !important;
 }
 
+.lh-23 {
+  line-height: 23px !important;
+}
+
+.lh-25 {
+  line-height: 25px !important;
+}
+
 .lh-40 {
   line-height: 40px !important;
 }
@@ -61,6 +69,11 @@
 
 .mt-150 {
   margin-top: 150px !important;
+}
+
+.mtb-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .font-100 {
@@ -97,6 +110,10 @@
 
 .font-16 {
   font-size: 16px !important;
+}
+
+.font-14 {
+  font-size: 14px !important;
 }
 
 .font-12 {
@@ -151,6 +168,10 @@
   width: 620px;
 }
 
+.w--675 {
+  width: 675px;
+}
+
 .w--700 {
   width: 700px;
 }
@@ -159,10 +180,22 @@
   top: 47px;
 }
 
+.top-55 {
+  top: -55px !important;
+}
+
 .w--full {
   width: 100% !important;
 }
 
 .no-margin {
   margin: 0 auto !important;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.color-black {
+  color: black !important;
 }
