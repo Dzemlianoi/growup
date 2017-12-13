@@ -1,8 +1,17 @@
 /.bundle
 /log/*
 /tmp/*
+/.idea/*
+.idea
+.idea/*
+app/views/courses/show.html.erb
+public/*
 
 /node_modules
 /yarn-error.log
 
 .ruby-gemset
+
+# Ignore application configuration
+/config/application.yml
+/config/secrets.yml

@@ -11,6 +11,8 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
+  config.action_mailer.default_url_options = { host: 'grow-up.herokuapp.com' }
+  config.action_mailer.perform_deliveries = false
   config.log_formatter = ::Logger::Formatter.new
   if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
@@ -18,4 +20,5 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
   config.active_record.dump_schema_after_migration = false
+  config.force_ssl = true
 end

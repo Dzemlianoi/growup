@@ -3,11 +3,39 @@
   %head
     = csrf_meta_tags
     = stylesheet_link_tag 'application.css'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700'
+    = javascript_include_tag 'application', 'data-turbolinks-track': true, cache: true, recursive: true, async: Rails.env.production?
     %meta{ charset: 'utf-8' }
     %title GrowupCourses
-  %body
-    %p.notice
-      = notice
-    %p.notice
-      = alert
-    = yield
+  %body.main{ class: "#{'reveal' if controller =='courses' && action == 'show' }" }
+    .container-fluid
+      %nav.row
+        .col-md-2.col-sm-6.col-5.logo-block
+          = link_to root_path do
+            = image_tag 'logo1.png', class: 'logo-img'
+        - if current_user
+          .col-md-10.col-sm-6.col-7
+            .dropdown.nav-dropdown
+              #navMenu.dropdown-toggle{'data-toggle': 'dropdown'}
+                = image_tag(right_url_for_user(current_user.avatar), class: 'img-circle ')
+                %span
+                  = current_user&.name || 'Unknown Stranger'
+              %ul.dropdown-menu.dropdown-menu-right{'aria-labelledby': "navMenu"}
+                %li.dropdown-item
+                  = link_to 'Menu', menu_path
+                %li.dropdown-item
+                  = link_to 'Courses', courses_path
+                %li.dropdown-divider
+                %li.dropdown-item
+                  = link_to 'Logout', destroy_user_session_path
+      .row
+        .col-md-12
+          .page-wrapper{ class: ('no-padding' if course_page?) }
+            - unless controller.controller_name == "courses"
+              .flash-wrapper
+                - flash.each do |key, value|
+                  - key = 'danger' if key == 'alert'
+                  - key = 'success' if key == 'notice'
+                  %div{class: "text-center alert alert-#{key}" }
+                    = value
+            = yield

@@ -1,0 +1,146 @@
+.reveal.slide-wrapper{
+  height: 600px;
+}
+
+.reveal .slide-header{
+  font-weight: bold;
+  font-size: 55px;
+  margin-bottom: 70px;
+}
+
+.reveal .slide-header.slider-header-low-margin{
+  margin-bottom: 25px;
+}
+
+.reveal .img {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.reveal code {
+  background: white;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 40px 20px !important;
+  width: 100% !important;
+  display: inline;
+  padding: 5px 10px !important;
+  font-size: 25px;
+}
+
+.reveal pre {
+  width: 100% !important;
+  min-width: 350px;
+}
+
+.reveal .comment {
+  color: grey;
+  font-style: italic;
+}
+
+.reveal .highlighter {
+  position: relative;
+  left: 42%;
+  top: 78px;
+  width: 15%;
+  min-width: 30px;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
+  color: white;
+}
+
+.reveal code .highlighter {
+  top: -37px;
+  font-size: 20px;
+}
+
+.reveal .highlighter-git {
+  background: black !important;
+}
+
+.reveal .highlighter-bash {
+  background: #A61948 !important;
+}
+
+.reveal .highlighter-html {
+  background: #eb331b !important;
+}
+
+.reveal .highlighter-css {
+  background: #0261a9 !important;
+}
+
+.reveal .highlighter-js {
+  background: #dcd03d !important;
+  color: black !important;
+}
+
+.reveal .img-by-width{
+  width: 150px;
+}
+
+.reveal .img-by-width--middle{
+  width: 300px;
+}
+
+.reveal .img-by-height{
+  height: 150px;
+}
+
+.reveal .salmon{
+  color: salmon !important;
+}
+
+.reveal li{
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.reveal ul li a{
+  color: salmon;
+  line-height: 50px;
+}
+
+.reveal .title-definition{
+  margin-bottom: 20px;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.reveal .description-definition{
+  font-size: 25px;
+}
+
+.reveal .consistant-item{
+  margin: 0 auto;
+}
+
+.reveal .img-block{
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.reveal .img-inline-block div, .reveal .img-inline-block img {
+  display: inline-block;
+  visibility: middle;
+}
+
+.reveal .list-item {
+  margin-bottom: 40px;
+}
+
+.reveal th{
+  text-align: center !important;
+  color: salmon;
+}
+
+.reveal th, .reveal td{
+  padding: 20px !important;
+}
+
+.reveal .hint {
+  color: grey !important;
+  font-style: italic;
+}
